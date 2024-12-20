@@ -82,6 +82,10 @@ sns.heatmap(rf_cm, annot=True, fmt='d', cmap='Blues', ax=axes[0], xticklabels=np
 sns.heatmap(lr_cm, annot=True, fmt='d', cmap='Blues', ax=axes[1], xticklabels=np.unique(y_test), yticklabels=np.unique(y_test))
 axes[0].set_title('랜덤 포레스트 오차 행렬')
 axes[1].set_title('로지스틱 회귀 오차 행렬')
+
+# 그래프를 PNG 파일로 저장
+plt.savefig('result/confusion_matrix.png', bbox_inches='tight')  # 'result' 폴더에 저장
+
 plt.show()
 
 # 교차 검증
